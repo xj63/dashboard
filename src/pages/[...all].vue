@@ -7,7 +7,7 @@ export default defineComponent({
 <template>
   <div class="wrapper">
     <v-icon class="logo mb-4" icon="custom:nustar" />
-    <p class="text-h5">404 Not Found</p>
+    <p class="text-h5">This Page Not Found.</p>
   </div>
 </template>
 
