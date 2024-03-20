@@ -24,6 +24,7 @@ Object.keys(mdicons).forEach((key) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/dashboard',
   plugins: [
     viteCompression({
       filter: "/.(js|css|json|txt|html|ico|svg)(?.*)?$/i", // 需要压缩的文件
