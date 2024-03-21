@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import DialogConfirm from '@/components/DialogConfirm.vue'
 import type { DataTableHeaders } from '@/plugins/vuetify'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 definePage({
   meta: {
@@ -26,6 +28,10 @@ function showDialogDelete(name: string) {
         }
       }
     })
+}
+
+function jumpToPosition(item: any) {
+  router.push({ path: 'device-position', query: { id: item.id } })
 }
 
 function timestampToDate(timestamp: number) {
@@ -175,7 +181,9 @@ const headers: DataTableHeaders = [
 
             <!-- position -->
             <template #item.status.position="{ item }">
-              {{ item.status.position }}
+              <v-btn @click="jumpToPosition(item)">
+                {{ item.status.position }}
+              </v-btn>
             </template>
 
             <!-- status -->
