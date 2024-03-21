@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AMapContainerMarker: typeof import('./components/AMapContainerMarker.vue')['default']
     AppBar: typeof import('./components/layout/AppBar.vue')['default']
     AppDrawer: typeof import('./components/layout/AppDrawer.vue')['default']
     AppDrawerItem: typeof import('./components/layout/AppDrawerItem.vue')['default']
