@@ -90,23 +90,21 @@ const headers: DataTableHeaders = [
     <v-row>
       <v-col>
         <v-card>
-          <client-only>
-            <teleport to="#app-bar">
-              <v-text-field
-                v-model="search"
-                prepend-inner-icon="mdi-magnify"
-                label="Search"
-                single-line
-                hide-details
-                density="compact"
-                class="mr-2"
-                rounded="xl"
-                flat
-                variant="solo"
-                style="width: 250px"
-              ></v-text-field>
-            </teleport>
-          </client-only>
+          <teleport to="#app-bar">
+            <v-text-field
+              v-model="search"
+              prepend-inner-icon="mdi-magnify"
+              label="Search"
+              single-line
+              hide-details
+              density="compact"
+              class="mr-2"
+              rounded="xl"
+              flat
+              variant="solo"
+              style="width: 250px"
+            ></v-text-field>
+          </teleport>
           <v-data-table
             :headers="headers"
             :items="desserts"
