@@ -79,7 +79,7 @@ const headers: DataTableHeaders = [
   { title: 'Online', key: 'status.online' },
   { title: 'Last update', key: 'status.last_update' },
   { title: 'Battery', key: 'status.battery' },
-  { title: 'Position', key: 'status.position' },
+  { title: 'Position', key: 'status.position', align: 'center' },
   { title: 'Status', key: 'status.status' },
   { title: 'Actions', key: 'actions', sortable: false },
 ]
