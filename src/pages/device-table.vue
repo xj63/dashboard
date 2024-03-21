@@ -86,14 +86,34 @@ const headers: DataTableHeaders = [
         <v-card>
           <client-only>
             <teleport to="#app-bar">
-              <v-text-field v-model="search" prepend-inner-icon="mdi-magnify" label="Search" single-line hide-details
-                density="compact" class="mr-2" rounded="xl" flat variant="solo" style="width: 250px"></v-text-field>
+              <v-text-field
+                v-model="search"
+                prepend-inner-icon="mdi-magnify"
+                label="Search"
+                single-line
+                hide-details
+                density="compact"
+                class="mr-2"
+                rounded="xl"
+                flat
+                variant="solo"
+                style="width: 250px"
+              ></v-text-field>
             </teleport>
           </client-only>
-          <v-data-table :headers="headers" :items="desserts" item-value="name" :search="search">
+          <v-data-table
+            :headers="headers"
+            :items="desserts"
+            item-value="name"
+            :search="search"
+          >
             <!-- online -->
             <template #item.status.online="{ item }">
-              <v-icon v-if="item.status.online" icon="mdi-cloud" color="success"></v-icon>
+              <v-icon
+                v-if="item.status.online"
+                icon="mdi-cloud"
+                color="success"
+              ></v-icon>
               <v-icon v-else icon="mdi-cloud-off" color="error"></v-icon>
             </template>
 
@@ -104,16 +124,51 @@ const headers: DataTableHeaders = [
 
             <!-- battery -->
             <template #item.status.battery="{ item }">
-              <v-icon v-if="item.status.battery > 95" icon="mdi-battery" color="green"></v-icon>
-              <v-icon v-else-if="item.status.battery > 85" icon="mdi-battery-90" color="green"></v-icon>
-              <v-icon v-else-if="item.status.battery > 75" icon="mdi-battery-80" color="green"></v-icon>
-              <v-icon v-else-if="item.status.battery > 65" icon="mdi-battery-70"></v-icon>
-              <v-icon v-else-if="item.status.battery > 55" icon="mdi-battery-60"></v-icon>
-              <v-icon v-else-if="item.status.battery > 45" icon="mdi-battery-50"></v-icon>
-              <v-icon v-else-if="item.status.battery > 35" icon="mdi-battery-40"></v-icon>
-              <v-icon v-else-if="item.status.battery > 25" icon="mdi-battery-30"></v-icon>
-              <v-icon v-else-if="item.status.battery > 15" icon="mdi-battery-20" color="red"></v-icon>
-              <v-icon v-else-if="item.status.battery > 5" icon="mdi-battery-10" color="red"></v-icon>
+              <v-icon
+                v-if="item.status.battery > 95"
+                icon="mdi-battery"
+                color="green"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 85"
+                icon="mdi-battery-90"
+                color="green"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 75"
+                icon="mdi-battery-80"
+                color="green"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 65"
+                icon="mdi-battery-70"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 55"
+                icon="mdi-battery-60"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 45"
+                icon="mdi-battery-50"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 35"
+                icon="mdi-battery-40"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 25"
+                icon="mdi-battery-30"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 15"
+                icon="mdi-battery-20"
+                color="red"
+              ></v-icon>
+              <v-icon
+                v-else-if="item.status.battery > 5"
+                icon="mdi-battery-10"
+                color="red"
+              ></v-icon>
               <v-icon v-else icon="mdi-battery-outline" color="red"></v-icon>
               {{ item.status.battery }}%
             </template>
@@ -131,21 +186,27 @@ const headers: DataTableHeaders = [
 
             <!-- action -->
             <template #item.actions="{ item }">
-              <v-defaults-provider :defaults="{
-                VBtn: {
-                  size: 20,
-                  rounded: 'sm',
-                  variant: 'text',
-                  class: 'ml-1',
-                  color: '',
-                },
-                VIcon: {
-                  size: 20,
-                },
-              }">
+              <v-defaults-provider
+                :defaults="{
+                  VBtn: {
+                    size: 20,
+                    rounded: 'sm',
+                    variant: 'text',
+                    class: 'ml-1',
+                    color: '',
+                  },
+                  VIcon: {
+                    size: 20,
+                  },
+                }"
+              >
                 <v-tooltip location="top">
                   <template #activator="{ props }">
-                    <v-btn icon="mdi-delete-outline" v-bind="props" @click.stop="showDialogDelete(item.id)" />
+                    <v-btn
+                      icon="mdi-delete-outline"
+                      v-bind="props"
+                      @click.stop="showDialogDelete(item.id)"
+                    />
                   </template>
                   <span>Delete</span>
                 </v-tooltip>
