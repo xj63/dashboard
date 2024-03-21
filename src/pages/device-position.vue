@@ -10,8 +10,12 @@ definePage({
     drawerIndex: 4,
   },
 })
+
+const positionQuery = route.query.position
+const position: String = typeof positionQuery == 'string' ? positionQuery : ''
 </script>
 
 <template>
-  <div>hello {{ route.query.id }}</div>
+  <div>{{ route.query.id }}</div>
+  <AMapContainerMarker :position="position" />
 </template>

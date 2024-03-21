@@ -31,7 +31,13 @@ function showDialogDelete(name: string) {
 }
 
 function jumpToPosition(item: any) {
-  router.push({ path: 'device-position', query: { id: item.id } })
+  router.push({
+    path: 'device-position',
+    query: {
+      id: item.id,
+      position: item.status.position,
+    },
+  })
 }
 
 function timestampToDate(timestamp: number) {
@@ -45,7 +51,7 @@ const desserts = ref([
       online: true,
       last_update: 1709110302,
       battery: 49,
-      position: '40.7127763N, 74.0059742W',
+      position: '31.40527N, 121.48941E',
       status: true,
       error: '',
     },
