@@ -44,6 +44,7 @@ const toggleDark = useToggle<true, false | null>(isDark)
         @update:model-value="toggleDark"
       ></v-switch>
     </div>
+    <ButtonFullScreen />
     <v-btn
       icon
       href="https://github.com/kingyue737/vitify-next"
