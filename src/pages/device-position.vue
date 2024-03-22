@@ -16,6 +16,5 @@ const position: String = typeof positionQuery == 'string' ? positionQuery : ''
 </script>
 
 <template>
-  <div>{{ route.query.id }}</div>
   <AMapContainerMarker :position="position" />
 </template>
