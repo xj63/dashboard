@@ -11,8 +11,12 @@ const COLORS = [
   '#b4e0f3',
   '#ffffff',
 ]
-const lngExtent = [39.5, 40.6]
-const latExtent = [115.9, 116.8]
+const lngExtent = [40, 40.5]
+const latExtent = [115, 115.4]
+const mapCenter = [
+  latExtent.reduce((a, b) => a + b) / latExtent.length,
+  lngExtent.reduce((a, b) => a + b) / lngExtent.length,
+]
 const cellCount = [50, 50]
 const cellSizeCoord = [
   (lngExtent[1] - lngExtent[0]) / cellCount[0],
@@ -118,8 +122,8 @@ const option = {
     },
   ],
   bmap: {
-    center: [116.46, 39.92],
-    zoom: 11.8,
+    center: mapCenter,
+    zoom: 13,
     roam: true,
     mapStyle: {
       styleJson: [
