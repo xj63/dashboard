@@ -18,6 +18,13 @@ If you are interested in this template, I highly recommend you check out their r
 This is DQWR's dashboard.
 
 
+## Author
+
+- xj63     <xj63work@163.com>
+- 551      <2293721550@qq.com>
+- yxxhh29  <2280443581@qq.com>
+
+
 ## Notice
 
 I’m a beginner, if there’s anything I’m not doing right, please bear with me.
