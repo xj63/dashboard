@@ -104,7 +104,7 @@ const headers: DataTableHeaders = [
               single-line
               hide-details
               density="compact"
-              class="mr-2"
+              class="mr-2 d-none d-sm-block"
               rounded="xl"
               flat
               variant="solo"
