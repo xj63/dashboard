@@ -14,6 +14,7 @@ declare module 'vue' {
     AppFooter: typeof import('./components/layout/AppFooter.vue')['default']
     AppNotification: typeof import('./components/layout/AppNotification.vue')['default']
     AppNotificationItem: typeof import('./components/layout/AppNotificationItem.vue')['default']
+    BMapECharts: typeof import('./components/BMapECharts.vue')['default']
     ButtonSettings: typeof import('./components/layout/ButtonSettings.vue')['default']
     ChartBar: typeof import('./components/demo-charts/ChartBar.vue')['default']
     ChartLine: typeof import('./components/demo-charts/ChartLine.vue')['default']

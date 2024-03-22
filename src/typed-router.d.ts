@@ -24,6 +24,7 @@ declare module 'vue-router/auto-routes' {
     '/device-position': RouteRecordInfo<'/device-position', '/device-position', Record<never, never>, Record<never, never>>,
     '/device-table': RouteRecordInfo<'/device-table', '/device-table', Record<never, never>, Record<never, never>>,
     '/homepage': RouteRecordInfo<'/homepage', '/homepage', Record<never, never>, Record<never, never>>,
+    '/map-chart': RouteRecordInfo<'/map-chart', '/map-chart', Record<never, never>, Record<never, never>>,
     '/nested': RouteRecordInfo<'/nested', '/nested', Record<never, never>, Record<never, never>>,
     '/nested/menu1': RouteRecordInfo<'/nested/menu1', '/nested/menu1', Record<never, never>, Record<never, never>>,
     '/nested/menu2': RouteRecordInfo<'/nested/menu2', '/nested/menu2', Record<never, never>, Record<never, never>>,
