@@ -47,7 +47,7 @@ const toggleDark = useToggle<true, false | null>(isDark)
     <ButtonFullScreen />
     <v-btn
       icon
-      href="https://github.com/kingyue737/vitify-next"
+      href="https://github.com/xj63/dashboard"
       size="small"
       class="ml-2"
       target="_blank"
