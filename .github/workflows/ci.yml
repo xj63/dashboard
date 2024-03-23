@@ -21,7 +21,7 @@ jobs:
           cache: pnpm
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Lint
         run: pnpm run lint
@@ -37,7 +37,7 @@ jobs:
           cache: pnpm
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Typecheck
         run: pnpm run typecheck
@@ -61,7 +61,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm run test:unit
 
   e2e:
@@ -74,7 +74,7 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
       - name: Install Playwright Browsers
         run: pnpm playwright install chromium
       - name: Run Playwright tests
