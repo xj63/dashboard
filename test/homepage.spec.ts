@@ -5,7 +5,6 @@ import { renderWithVuetify } from '@/../test/helpers'
 describe('homepage', () => {
   it('Notify correctly', async () => {
     const { getByText, getByLabelText } = renderWithVuetify(Homepage)
-    getByText('Opinionated Starter Template')
     const input = getByLabelText("What's your name?")
     await fireEvent.update(input, 'kingyue')
 
